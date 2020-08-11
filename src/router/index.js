@@ -3,8 +3,7 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
-const routes = [
-  {
+const routes = [{
     path: "/",
     redirect: "index"
   },
@@ -12,44 +11,49 @@ const routes = [
     path: "/index",
     name: "index",
     component: () => import("../views/index.vue"),
-    meta: { title: "首页" },
-    redirect: "/home",
-    children: [
-      {
-        path: "/home",
-        name: "home",
-        component: () => import("../views/Home/Home"),
-        meta: { title: "首页" }
-      },
-      {
+    meta: {
+      title: "首页"
+    },
+    redirect: "/trafficlist",
+    children: [{
         path: "/trafficlist",
         name: "trafficlist",
         component: () => import("../views/TrafficList/TraffiList"),
-        meta: { title: "流量主列表" }
+        meta: {
+          title: "流量主列表"
+        }
       },
       {
         path: "/storelist",
         name: "storelist",
         component: () => import("../views/StoreList/StoreList.vue"),
-        meta: { title: "商家列表" }
+        meta: {
+          title: "商家列表"
+        }
       },
       {
         path: "/operation",
         name: "operation",
         component: () => import("../views/StoreList/Operation.vue"),
-        meta: { title: "商家详情" }
+        meta: {
+          title: "商家详情"
+        }
       },
       {
         path: "/orderinfo",
-        name: "storelist",
+        name: "orderinfo",
         component: () => import("../views/OrderInfo/OrderInfo"),
-        meta: { title: "订单管理" }
+        meta: {
+          title: "订单管理"
+        }
       },
       {
         path: "/orderdetails",
         name: "orderdetails",
         component: () => import("../views/OrderInfo/Orderdetails"),
-        meta: { title: "订单详情" }
+        meta: {
+          title: "订单详情"
+        }
       }
     ]
   },

@@ -7,7 +7,6 @@
           background-color="#324057"
           text-color="#fff"
           mode="vertical"
-          router
           :unique-opened="true"
           :collapse="collapse"
           :default-active="$route.path"
@@ -35,11 +34,6 @@ export default {
       items: [
         {
           icon: "el-icon-menu",
-          name: "home",
-          path: "/home"
-        },
-        {
-          icon: "el-icon-menu",
           name: "流量主管理",
           path: "trafficlist",
           children: [
@@ -52,7 +46,7 @@ export default {
         {
           icon: "el-icon-s-shop",
           name: "商家管理",
-          path: "/store",
+          path: "store",
           children: [
             {
               path: "/storelist",
@@ -63,7 +57,7 @@ export default {
         {
           icon: "el-icon-tickets",
           name: "订单管理",
-          path: "/order",
+          path: "order",
           children: [
             {
               path: "/orderinfo",

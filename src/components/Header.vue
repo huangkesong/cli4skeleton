@@ -55,10 +55,10 @@ export default {
     },
     showInfoList() {
       // console.log('下来菜单')
-      this.$router.push("/infoshow");
+      // this.$router.push("/infoshow");
     },
     logout() {
-      // console.log('退出')
+      console.log("退出");
       //清除token
       // localStorage.removeItem("eleToken");
       //清除vuex

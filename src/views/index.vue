@@ -1,7 +1,10 @@
 <template>
   <div class="index">
+    <!-- header -->
     <Header></Header>
+    <!-- left menu -->
     <LeftMenu></LeftMenu>
+    <!-- 主体部分 -->
     <div class="rightContainer" :class="{ 'content-collapse': collapse }">
       <div class="content">
         <transition name="move" mode="out-in">
